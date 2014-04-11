@@ -18,13 +18,14 @@
   "author": "Dom Harrington <dom@harrington-mail.com>",
   "license": "ISC",
   "peerDependencies": {
-    "schemata": "^2.0.0"
+    "schemata": "*"
   },
   "devDependencies": {
     "mocha": "^1.18.2",
     "istanbul": "^0.2.7",
     "jshint": "^2.5.0",
-    "validity": "0.0.3"
+    "validity": "0.0.3",
+    "schemata": "^2.0.0"
   },
   "repository": {
     "type": "git",
