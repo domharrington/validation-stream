@@ -1,0 +1,37 @@
+{
+  "name": "validation-stream",
+  "description": "Object validation stream for schemata schemas",
+  "version": "0.0.0",
+  "dependencies": {
+    "lodash.assign": "^2.4.1"
+  },
+  "scripts": {
+    "lint": "./node_modules/.bin/jshint .",
+    "pretest": "npm run-script lint",
+    "test": "./node_modules/.bin/istanbul cover ./node_modules/.bin/_mocha test",
+    "posttest": "./node_modules/.bin/istanbul check-coverage && rm -rf coverage",
+    "prepublish": "npm test && npm prune"
+  },
+  "publishConfig": {
+    "registry": "http://registry.npmjs.org"
+  },
+  "author": "Dom Harrington <dom@harrington-mail.com>",
+  "license": "ISC",
+  "peerDependencies": {
+    "schemata": "^2.0.0"
+  },
+  "devDependencies": {
+    "mocha": "^1.18.2",
+    "istanbul": "^0.2.7",
+    "jshint": "^2.5.0",
+    "validity": "0.0.3"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:domharrington/validation-stream.git"
+  },
+  "keywords": [
+    "schemata",
+    "validation"
+  ]
+}
