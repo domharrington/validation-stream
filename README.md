@@ -43,6 +43,11 @@ Options must include:
 
 - `schema` - a schemata schema with a `validate` function
 
+Options can include:
+
+- `haltOnError` - whether to emit `error` on validation error (and stop processing).
+Defaults to `false`. If true, it emits a `validationError` for each validation error
+
 ## Credits
 [Dom Harrington](https://github.com/domharrington/)
 

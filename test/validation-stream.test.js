@@ -47,4 +47,27 @@ describe('validation stream', function () {
     stream.end()
   })
 
+  it('should emit a `validationError` event if `haltOnError` is false', function (done) {
+    var stream = new ValidationStream({ schema: schema, haltOnError: false })
+      , called = false
+
+    stream.on('error', function () {
+      assert(false, 'This should not be called')
+    })
+
+    stream.on('validationError', function (err) {
+      assert.deepEqual(err.object, {})
+      assert.equal(err.errors.name, 'Name is required')
+      called = true
+    })
+
+    stream.on('finish', function () {
+      assert(called, 'Validation error should be called')
+      done()
+    })
+
+    stream.write({})
+    stream.end()
+  })
+
 })
