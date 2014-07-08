@@ -1,7 +1,7 @@
 {
   "name": "validation-stream",
   "description": "Object validation stream for schemata schemas",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "dependencies": {
     "lodash.assign": "^2.4.1"
   },
